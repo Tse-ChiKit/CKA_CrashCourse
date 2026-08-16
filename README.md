@@ -34,13 +34,12 @@ Important knowledge is later promoted from the daily log into `concepts/` or `ch
 ## Progress
 
 - [x] Day 0 — Prepare Linux nodes and Kubernetes prerequisites
-- [x] Day 1 — Kubernetes architecture and kubeadm bootstrap fundamentals
-- [x] Day 2 — Bootstrap control plane, install Calico, join worker1/worker2, and review cluster-component troubleshooting
-- [ ] Day 3 — Workloads and day-to-day Kubernetes administration
+- [x] Day 1 — Kubernetes architecture, kubeadm bootstrap, Calico CNI, worker join and cluster troubleshooting
+- [ ] Day 2 — Workloads and day-to-day Kubernetes administration
 
 ## Current lab checkpoint
 
-As of Day 2, the lab has a working 3-node kubeadm cluster:
+As of the end of Day 1, the lab has a working 3-node kubeadm cluster:
 
 ```text
 control-plane
@@ -48,4 +47,4 @@ worker1
 worker2
 ```
 
-Calico is installed as the CNI and both worker nodes have joined the cluster. Day 3 can start directly from workload administration without rebuilding the cluster.
+The control-plane was initialized with kubeadm, Calico is installed as the CNI, and both worker nodes have joined the cluster. Day 2 can start directly from Kubernetes workload administration without rebuilding the cluster.
