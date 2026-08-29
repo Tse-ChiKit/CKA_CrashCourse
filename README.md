@@ -36,11 +36,12 @@ Important knowledge is later promoted from the daily log into `concepts/` or `ch
 - [x] Day 0 — Prepare Linux nodes and Kubernetes prerequisites
 - [x] Day 1 — Kubernetes architecture, kubeadm bootstrap, Calico CNI, worker join and cluster troubleshooting
 - [x] Day 2 — Pods, Deployments, ReplicaSets, rollout/rollback, Services, labels/selectors and declarative YAML
-- [ ] Day 3 — Configuration, health checks, resources and scheduling
+- [x] Day 3 — ConfigMap, Secret, environment variables, configuration Volumes and reference troubleshooting
+- [ ] Day 4 — Workload reliability and scheduling topics
 
 ## Current lab checkpoint
 
-As of the end of Day 2, the lab has a working 3-node kubeadm cluster:
+The lab has a working 3-node kubeadm cluster:
 
 ```text
 k8s-control
@@ -50,7 +51,7 @@ k8s-worker-02
 
 The control-plane was initialized with kubeadm, Calico is installed as the CNI, and both worker nodes have joined the cluster.
 
-Day 2 added hands-on workload administration:
+### Day 2 workload administration
 
 - bare Pods and Pod lifecycle inspection
 - Deployments and ReplicaSets
@@ -61,4 +62,17 @@ Day 2 added hands-on workload administration:
 - Endpoint/EndpointSlice inspection
 - declarative Deployment YAML and `kubectl apply`
 
-Day 3 can continue directly with configuration and workload reliability topics such as ConfigMap, Secret, environment variables, probes, resource requests/limits and scheduling/troubleshooting.
+### Day 3 configuration management
+
+- ConfigMap creation and inspection
+- `configMapKeyRef` and `envFrom/configMapRef`
+- ConfigMap Volume mounts and key-to-file mapping
+- environment-variable vs Volume update behavior
+- ConfigMap/Secret namespace scope
+- generic Opaque Secrets
+- Base64 encoding vs encryption
+- `secretKeyRef`, `secretRef` and Secret Volume patterns
+- troubleshooting missing objects vs missing keys with Pod Events
+- YAML `|` multiline literal syntax
+
+Day 4 can continue with workload reliability and scheduling topics such as probes, resource requests/limits and related troubleshooting.
